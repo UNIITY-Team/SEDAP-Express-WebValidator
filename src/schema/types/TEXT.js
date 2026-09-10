@@ -19,10 +19,10 @@ export default {
     },
   ],
   samples: [
-    'TEXT;78;0195238E25AD;324E;S;TRUE;;;1;NONE;"This is an alert!";1000',
-    'TEXT;79;0195238E25CC;324E;C;TRUE;;;2;NONE;"This is a warning!"',
-    'TEXT;7A;0195238E25EF;324E;R;;;;3;;"This is a notice!"',
-    'TEXT;7B;0195238E285B;324E;U;;;ORKA;4;BASE64;IlRoaXMgaXMgYSBjaGF0IG1lc3NhZ2UhIg==',
-    'TEXT;56;0191C643A8AF;324E;S;;;E4F1;4;NONE;This is a chat message!',
+    'TEXT;78;0195238E25AD;324E;S;TRUE;;;01;NONE;"This is an alert!";1000',
+    'TEXT;79;0195238E25CC;324E;C;TRUE;;;02;NONE;"This is a warning!"',
+    'TEXT;7A;0195238E25EF;324E;R;;;;03;;"This is a notice!"',
+    'TEXT;7B;0195238E285B;324E;U;;;ORKA;04;BASE64;IlRoaXMgaXMgYSBjaGF0IG1lc3NhZ2UhIg==',
+    'TEXT;56;0191C643A8AF;324E;S;;;E4F1;04;NONE;This is a chat message!',
   ],
 };
