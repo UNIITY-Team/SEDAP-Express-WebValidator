@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEDAP Express Generator · REPMUS 2026</title>
+  <link rel="stylesheet" href="src/ui/style.css?v=3" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">✦</span>
+        <span><span class="brand-title">REPMUS 2026</span><span class="brand-sub">SEDAP Express · Generator</span></span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">← Exercise Portal</a>
+        <a href="generator.html" class="nav-active">Generator</a>
+        <a href="validator.html">Validator</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+  <button id="themeToggle" title="Toggle theme">🌓</button>
+
+  <div id="app">
+    <h1 class="page-title">⬡ SEDAP Express Generator</h1>
+    <p class="page-sub">Build a message field by field. The form follows the field order of SEDAP-Express ICD v1.4.8; the generated message is validated with the same rules as the Validator.</p>
+
+    <div class="card">
+      <div class="section-title" style="margin-top:0">Message type</div>
+      <div id="type-buttons" class="type-buttons"></div>
+      <p id="type-desc" class="type-desc"></p>
+    </div>
+
+    <div id="idle-state" class="idle">Select a message type above to start</div>
+
+    <div id="form-area" class="hidden">
+      <div id="fields"></div>
+      <div class="actions">
+        <button id="btn-generate" class="btn">▶ Generate</button>
+        <button id="btn-clear" class="btn btn-secondary">✕ Clear</button>
+      </div>
+
+      <div id="output-area" class="output hidden">
+        <div class="section-title">Output
+          <small><button id="btn-copy" class="btn btn-secondary btn-small">⧉ Copy</button> <a id="open-validator" href="validator.html" target="_blank">open in Validator ↗</a></small>
+        </div>
+        <code id="output-code" class="output-code"></code>
+        <div id="output-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="hidden"></div>
+  <script type="module" src="src/ui/generator/main.js"></script>
+</body>
+</html>

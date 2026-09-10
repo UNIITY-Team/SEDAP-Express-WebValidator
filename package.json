@@ -1,0 +1,11 @@
+{
+  "name": "sedap-express-validator",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SEDAP-Express message validator and generator (ICD v1.4.8)",
+  "scripts": {
+    "test": "node --test",
+    "serve": "python3 -m http.server 8080"
+  }
+}

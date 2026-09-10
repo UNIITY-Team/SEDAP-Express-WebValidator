@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SEDAP Express Tools – generate and validate SEDAP Express messages (ICD v1.4.8)." />
+  <title>SEDAP Express Tools</title>
+  <link rel="stylesheet" href="src/ui/style.css?v=3" />
+</head>
+<body>
+  <!-- Minimal portal page. The exercise portal used in production carries more content
+       and its own assets; this file only provides the entry point the tool pages link back to. -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">✦</span>
+        <span><span class="brand-title">SEDAP Express</span><span class="brand-sub">Message Tooling</span></span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-active">Portal</a>
+        <a href="generator.html">Generator</a>
+        <a href="validator.html">Validator</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+  <button id="themeToggle" title="Toggle theme">🌓</button>
+
+  <div id="app">
+    <h1 class="page-title">SEDAP Express Tooling</h1>
+    <p class="page-sub">Web-based tools for generating and validating SEDAP Express messages according to ICD v1.4.8. Both tools run entirely in the browser — no data is transmitted.</p>
+
+    <div class="tool-cards">
+      <a href="generator.html" class="tool-card">
+        <div class="tool-card-icon">▶</div>
+        <div>
+          <h3>Message Generator</h3>
+          <p>Build any SEDAP Express message type field by field in ICD order. Live field checks, auto-timestamp, one-click copy and built-in validation of the result.</p>
+        </div>
+        <div class="tool-card-arrow">→</div>
+      </a>
+      <a href="validator.html" class="tool-card">
+        <div class="tool-card-icon">✔</div>
+        <div>
+          <h3>Message Validator</h3>
+          <p>Paste one or more SEDAP Express messages and check structure, mandatory fields and value ranges. Every finding quotes the ICD section and original wording; all ICD sample messages can be loaded directly.</p>
+        </div>
+        <div class="tool-card-arrow">→</div>
+      </a>
+    </div>
+
+    <p class="portal-note">Single source of truth: SEDAP-Express ICD v1.4.8. KEYEXCHANGE (§6.15) is not covered.</p>
+  </div>
+
+  <script type="module">
+    import { initChrome } from './src/ui/common.js';
+    initChrome();
+  </script>
+</body>
+</html>
